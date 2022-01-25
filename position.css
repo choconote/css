@@ -1,0 +1,91 @@
+/* 
+position: static
+
+
+position: relative
+    상대 위치
+
+.box {
+	width: 100px;
+	height: 50px;
+}
+.parent {
+	border: 2px solid red;
+}
+.static {
+	position: static;
+	background: pink;
+}
+.relative {
+	position: relative;
+	background: skyblue;
+}
+position: absolute
+    절대 위치
+
+position: fixed     
+
+    스크롤할 때 따라다니는 메뉴
+
+
+*/
+
+
+/* .box {
+	width: 100px;
+	height: 50px;
+}
+.parent {
+	height: 2400px;
+	position: relative;
+	border: 2px solid blue;
+}
+.absolute{
+	position: absolute;
+	background-color: skyblue;
+}
+.top {
+	top: 16px;
+	left: 16px;
+}
+.bottom {
+	bottom: 16px;
+	right: 16px;
+}
+.fixed {
+	position: fixed;
+	right: 16px;
+	top: 16px;
+	background-color: pink;
+} */
+
+/* z-index : 수직으로 어떻게 쌓이는지 정하는 프로퍼티 */
+.box {
+	width: 100px;
+	height: 50px;
+	position: absolute;
+}
+.parent {
+	position: relative;
+	border: 2px solid red;
+	width: 200px;
+	height: 100px;
+}
+.top {
+	background-color: pink;
+	right: 16px;
+	bottom: 16px;
+	z-index: 50;
+}
+.middle {
+	background-color: skyblue;
+	right: 32px;
+	bottom: 32px;
+	z-index: 25;
+}
+.bottom {
+	background-color: lemonchiffon;
+	right: 48px;
+	bottom: 48px;
+	z-index: 1;
+}
