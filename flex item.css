@@ -1,0 +1,82 @@
+/* flex item
+    flex-grow : 값이 1 이상인 flex item이 여러 개라면 flex-grow값에 따라 flex container의 크기를 나눠 가짐
+    display: flex가 적용된 부모 요소의 자식 요소에만 사용가능
+
+    flex-grow 크기는 비율
+*/
+
+.container {
+	background-color: skyblue;
+	height: 36px;
+	padding: 12px;
+	margin-bottom: 16px;
+	display: flex;
+}
+.item {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid #fff;
+	background: pink;
+	flex-grow: 1;
+}
+.target {
+	background-color: lemonchiffon;
+	flex-grow: 2;
+}
+.none {
+	background-color: grey;
+	flex-grow: 0;
+}
+
+
+.container {
+	background-color: skyblue;
+	height: 36px;
+	padding: 12px;
+	margin-bottom: 16px;
+	display: flex;
+	width: 400px;
+}
+.item {
+	/* 텍스트 가운데 정렬을 위한 스타일*/
+	width: 200px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid #fff;
+	background: pink;
+}
+.none > .item {
+	flex-shrink: 0;
+}
+.active > .item {
+	flex-shrink: 1;
+}
+.target > .item:first-child {
+	flex-shrink: 1;
+}
+.target > .item:nth-child(2) {
+	flex-shrink: 5;
+}
+.target > .item:last-child {
+	flex-shrink: 3;
+}
+
+/* flex-shring는 flex item의 축소와 관련있다. 0과 정수(비율)
+기본값은 flex-grow와 달리 1. 속성값이 0일 경우 container
+*/
+/* flex-basis는 flex item의 기본 크기를 결정, 기본값은 auto */
+
+auto로 값이 설정되면 원래 컨턴츠의 크기가 할당
+
+flex-basis: auto
+flex-basis: 0;
+flex-basis: 100px;
+
+
+flex-grow: 1;
+flex-shrink: 0;
+flex-basis: 400px;
+/* 위와 아래는 동일한 코드 */
+flex: 1 0 400px;
